@@ -1,0 +1,13 @@
+{
+  "theme": "DARK",
+  "encoding": "utf-8",
+  "protocol": "HTTPS",
+  "timelineEnabled": false,
+  "offlineMode": true,
+  "thumbnailForBase64": false,
+  "documentTitle": "Test automation Scrappers ",
+  "reportName": "Scrappers results",
+  "timeStampFormat": "dd MM, yyyy HH:mm:ss a",
+  "js": "",
+  "css": ""
+}

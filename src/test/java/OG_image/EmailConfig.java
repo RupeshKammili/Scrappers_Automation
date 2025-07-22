@@ -59,7 +59,7 @@ public class EmailConfig {
 			        + "<body>"
 			        + "<p>This is a scrapper automation result for LinkedIn, Twitter, Facebook.</p>"
 			        + "<p><b>Click the link below to view the report:</b></p>"
-			        + "<p><a href=''>View Extent Report</a></p>"
+			        + "<a href='https://rupeshkammili.github.io/Scrappers_Automation/'>View Extent Report</a>"
 			        + "</body>"
 			        + "</html>";
 

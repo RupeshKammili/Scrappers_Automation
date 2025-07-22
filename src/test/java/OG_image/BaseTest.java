@@ -82,7 +82,7 @@ public class BaseTest extends EmailConfig {
 	@BeforeSuite
 	public void beforeSuite() throws IOException {
 
-		sparkReporter = new ExtentSparkReporter("AllTests.html");
+		sparkReporter = new ExtentSparkReporter("index.html");
 		reports = new ExtentReports();
 		sparkReporter.loadJSONConfig(new File("./src/test/resources/extent-reports-json.json"));
 		//sparkReporter.config().setOfflineMode(true);

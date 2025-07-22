@@ -59,7 +59,7 @@ public class EmailConfig {
 			        + "<body>"
 			        + "<p>This is a scrapper automation result for LinkedIn, Twitter, Facebook.</p>"
 			        + "<p><b>Click the link below to view the report:</b></p>"
-			        + "<p><a href='https://microsoftapc-my.sharepoint.com/:u:/g/personal/v-rkammili_microsoft_com/EQwb2zJOGTxDl7AQxIOhDbcBCp6I3AB76ZwwJmDAnCtcDw?e=csdmbm'>View Extent Report</a></p>"
+			        + "<p><a href=''>View Extent Report</a></p>"
 			        + "</body>"
 			        + "</html>";
 
@@ -68,7 +68,7 @@ public class EmailConfig {
 
 		
 			MimeBodyPart part = new MimeBodyPart();
-			part.attachFile(new File("AllTests.html"));
+			part.attachFile(new File("index.html"));
 
 			// Adding the multiple parts to object.
 			MimeMultipart multipart = new MimeMultipart();

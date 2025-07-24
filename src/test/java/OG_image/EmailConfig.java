@@ -2,8 +2,7 @@ package OG_image;
 
 import java.io.File;
 import java.util.Properties;
-
-import org.testng.annotations.Test;
+ 
 
 import jakarta.mail.Authenticator;
 import jakarta.mail.Message;
@@ -17,7 +16,7 @@ import jakarta.mail.internet.MimeMultipart;
 
 public class EmailConfig {
 	
-	@Test
+	 
 	public static void sendEmail() {
 
 		// G mail: demorupesh890@gmail.com

@@ -36,6 +36,7 @@ public class LinkedInPostInceptorPage extends AbstractClass {
         clickInspect.click();
         waitfortheVisbilityOfElement(b);
         clearInput.clear();
+        Thread.sleep(2000);
         String path = takeScreeShot(i+ fileName);
         i++;
         return path;

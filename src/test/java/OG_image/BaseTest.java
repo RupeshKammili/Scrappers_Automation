@@ -6,8 +6,6 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import AbstarctComponents.Log;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.*;
@@ -18,8 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+ 
 import java.util.Properties;
 
 public class BaseTest extends EmailConfig {
@@ -90,15 +87,17 @@ public class BaseTest extends EmailConfig {
 
 		reports.setSystemInfo("OS", System.getProperty("os.name"));
 		reports.setSystemInfo("java", System.getProperty("java.version"));
+		System.out.println("Before suite/");
 
 	}
 
 	@AfterSuite
 	public void afterSuite() throws IOException {
 		reports.flush();
-		Desktop.getDesktop().browse(new File("AllTests.html").toURI());
+		Desktop.getDesktop().browse(new File("index.html").toURI());
 		tdriver.remove();
-		sendEmail();
+		EmailConfig.sendEmail();
+		System.out.println("After syite");
 	}
 
 }

@@ -28,7 +28,7 @@ public class ScrappersLinkedIn extends BaseTest {
 		postInceptorPage.goToLinkedInPostInceptorPage();
 		Log.info("Loging in...");
 
-		test = reports.createTest("Test Linkedin login", "Please refer below screen shots for LinkedIn OG image")
+		test = reports.createTest("Test Linkedin Scrapper", "Please see the details tab below for the test URL and the OG image.")
 				.assignAuthor("Rupesh").assignDevice("Chrome");
 
 		Log.info("Validating each URL and taking screen shots...");
@@ -40,6 +40,7 @@ public class ScrappersLinkedIn extends BaseTest {
 	public void LinkedInPostInception(String urls) throws Exception {
 		
 		String path = postInceptorPage.validateOGimageForURL(urls, "LinkedIN.png");
+		test.info("Test URL: " + urls);
 		test.log(Status.PASS, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 	}
 

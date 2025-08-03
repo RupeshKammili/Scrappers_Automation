@@ -12,7 +12,7 @@ public class DBScrappers {
 	@DataProvider()
 	public static Object[] needTotestUrls( ) throws Exception {
 		
-		FileInputStream stream = new FileInputStream(new File("C:\\Users\\v-rkammili\\Desktop\\Scrapper_URLs.xlsx"));
+		FileInputStream stream = new FileInputStream(new File("./src/test/resources/Scrappers.xlsx"));
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
 		XSSFSheet sheet = workbook.getSheetAt(0);
 		int row = sheet.getPhysicalNumberOfRows();

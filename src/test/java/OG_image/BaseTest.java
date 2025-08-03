@@ -14,9 +14,12 @@ import java.awt.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Arrays;
- 
+
 import java.util.Properties;
 
 public class BaseTest extends EmailConfig {
@@ -54,16 +57,16 @@ public class BaseTest extends EmailConfig {
 		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 				+ "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36");
 
-		
 		// options.addArguments("--headless=new"); // Use "--headless" for older
 		// versions
 		// options.addArguments("--disable-gpu");
 		// options.addArguments("--window-size=1920,1080");
-		
+
 		options.addArguments("start-maximized");
 		WebDriver driver = new EdgeDriver(options);
-		((JavascriptExecutor)driver).executeScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
-		
+		((JavascriptExecutor) driver)
+				.executeScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
+
 		Log.info("Browser session satrted...");
 		setTdriver(driver);
 		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -79,11 +82,18 @@ public class BaseTest extends EmailConfig {
 	@BeforeSuite
 	public void beforeSuite() throws IOException {
 
-		sparkReporter = new ExtentSparkReporter("index.html");
+		sparkReporter = new ExtentSparkReporter("index1.html");
 		reports = new ExtentReports();
 		sparkReporter.loadJSONConfig(new File("./src/test/resources/extent-reports-json.json"));
-		//sparkReporter.config().setOfflineMode(true);
+		// sparkReporter.config().setOfflineMode(true);
 		reports.attachReporter(sparkReporter);
+
+//		String css = new String(Files.readAllBytes(Paths.get("./src/test/resources/extent.css")),
+//				StandardCharsets.UTF_8);
+//		String js = new String(Files.readAllBytes(Paths.get("./src/test/resources/custom.js")), StandardCharsets.UTF_8);
+		
+//		sparkReporter.config().setCss(css);
+//		sparkReporter.config().setJs(js);
 
 		reports.setSystemInfo("OS", System.getProperty("os.name"));
 		reports.setSystemInfo("java", System.getProperty("java.version"));
@@ -94,7 +104,7 @@ public class BaseTest extends EmailConfig {
 	@AfterSuite
 	public void afterSuite() throws IOException {
 		reports.flush();
-		Desktop.getDesktop().browse(new File("index.html").toURI());
+		Desktop.getDesktop().browse(new File("index1.html").toURI());
 		tdriver.remove();
 		EmailConfig.sendEmail();
 		System.out.println("After syite");

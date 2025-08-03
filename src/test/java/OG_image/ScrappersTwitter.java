@@ -29,7 +29,7 @@ public class ScrappersTwitter extends BaseTest {
 				prop.getProperty("Tpassword").toString());
 		Log.info("Loging in...");
 
-		test = reports.createTest("Test Twitter login", "Please refer below screen shots for Twitter OG image")
+		test = reports.createTest("Test Twitter Scrapper", "Please see the details tab below for the test URL and the OG image.")
 				.assignAuthor("Rupesh").assignDevice("Chrome");
 
 		Log.info("Validating each URL and taking screen shots...");
@@ -40,6 +40,7 @@ public class ScrappersTwitter extends BaseTest {
 	public void twitterInspectPost(String urls) throws Exception {
 
 		String path = twitterValidatorPage.twitterPageurlsValidation(urls);
+		test.info("Test URL: " + urls);
 		test.log(Status.PASS, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 	}
 

@@ -30,7 +30,7 @@ public class ScrappersFacebook extends BaseTest {
 		facebookLandingPage.LoginIntotheFacebbook(fuser, fpass);// enter credentials and signIn
 		Log.info("Loging in...");
 
-		test = reports.createTest("Test Facebook login", "Please refer below screen shots for Facebook OG image")
+		test = reports.createTest("Test Facebook Scrapper", "Please see the details tab below for the test URL and the OG image.")
 				.assignAuthor("Rupesh").assignDevice("Chrome");
 
 		Log.info("Validating each URL and taking screen shots...");
@@ -40,6 +40,7 @@ public class ScrappersFacebook extends BaseTest {
 			"facebookLanding" })
 	public void facebookPostInce(String urls) throws Exception {
 		String path = postInceptorpage.validateOGImage(urls, "window.scrollBy(0, 500);", "FaceBook.png");
+		test.info("Test URL: " + urls);
 		test.log(Status.PASS, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 
 	}

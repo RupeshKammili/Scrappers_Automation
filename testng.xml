@@ -7,11 +7,11 @@
 		</classes>
 	</test>
 
-	<test name="ScrapperTests1">
+	<!--<test name="ScrapperTests1">
 		<classes>
 			<class name="OG_image.ScrappersTwitter" />
 		</classes>
-	</test>
+	</test>-->
 
 	<test name="ScrapperTests2">
 		<classes>

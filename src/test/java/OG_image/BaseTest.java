@@ -82,7 +82,7 @@ public class BaseTest extends EmailConfig {
 	@BeforeSuite
 	public void beforeSuite() throws IOException {
 
-		sparkReporter = new ExtentSparkReporter("index1.html");
+		sparkReporter = new ExtentSparkReporter("wwwroot/index1.html");
 		reports = new ExtentReports();
 		sparkReporter.loadJSONConfig(new File("./src/test/resources/extent-reports-json.json"));
 		// sparkReporter.config().setOfflineMode(true);
@@ -104,7 +104,7 @@ public class BaseTest extends EmailConfig {
 	@AfterSuite
 	public void afterSuite() throws IOException {
 		reports.flush();
-		Desktop.getDesktop().browse(new File("index1.html").toURI());
+		Desktop.getDesktop().browse(new File("wwwroot/index1.html").toURI());
 		tdriver.remove();
 		EmailConfig.sendEmail();
 		System.out.println("After syite");

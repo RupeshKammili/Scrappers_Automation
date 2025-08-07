@@ -1,19 +1,20 @@
 package Server;
-import static spark.Spark.*;
 
+import static spark.Spark.*;
 import java.io.*;
 
 public class TriggerServer {
+
     public static void main(String[] args) {
 
-        // ✅ Set server port
-        port(8080);
+        // ✅ Set dynamic port for Azure or default to 8080
+        port(getAzureAssignedPort());
 
-        // ✅ Serve static files (ExtentReports, etc.)
-        staticFiles.externalLocation("C:\\Users\\v-rkammili\\OneDrive - Microsoft\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion");
-        System.out.println("✅ Serving static files from: C:\\Users\\v-rkammili\\OneDrive - Microsoft\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion");
+        // ✅ Serve static files (ExtentReports, uploaded Excel, etc.)
+        staticFiles.externalLocation("wwwroot");
+        System.out.println("✅ Serving static files from: wwwroot");
 
-        // ✅ CORS support
+        // ✅ Enable CORS
         options("/*", (request, response) -> {
             String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
             if (accessControlRequestHeaders != null) {
@@ -34,12 +35,12 @@ public class TriggerServer {
             response.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
         });
 
-        // ✅ POST route: Excel file upload
+        // ✅ POST: Upload Excel file
         post("/upload-excel", (req, res) -> {
             req.attribute("org.eclipse.jetty.multipartConfig", new javax.servlet.MultipartConfigElement("/temp"));
 
             try (InputStream is = req.raw().getPart("file").getInputStream()) {
-                File uploadDir = new File("C:/Users/v-rkammili/OneDrive - Microsoft/Automation_Projects/Scrapper_autoamtion/Scrapper_autoamtion/src/test/resources");
+                File uploadDir = new File("wwwroot/uploads");
                 if (!uploadDir.exists()) uploadDir.mkdirs();
 
                 File uploadedFile = new File(uploadDir, "Scrappers.xlsx");
@@ -47,30 +48,30 @@ public class TriggerServer {
                     byte[] buffer = new byte[4096];
                     int bytesRead;
                     while ((bytesRead = is.read(buffer)) != -1) {
-                    	os.write(buffer, 0, bytesRead);
+                        os.write(buffer, 0, bytesRead);
                     }
                 }
+
                 System.out.println("✅ Excel uploaded: " + uploadedFile.getAbsolutePath());
-                return "Excel file uploaded successfully.";
+                return "✅ Excel file uploaded successfully. Access it at: /uploads/Scrappers.xlsx";
             } catch (Exception e) {
                 res.status(500);
                 return "❌ Failed to upload Excel file: " + e.getMessage();
             }
         });
 
-        // ✅ POST route: Trigger tests
+        // ✅ POST: Trigger tests
         post("/run-tests", (req, res) -> {
             try {
-                File testProject = new File("C:\\Users\\v-rkammili\\OneDrive - Microsoft\\Automation_Projects\\Scrapper_autoamtion\\Scrapper_autoamtion");
-
-                ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "mvn test");
+                File testProject = new File(".");
+                ProcessBuilder pb = new ProcessBuilder("mvn", "test");
                 pb.directory(testProject);
                 pb.inheritIO();
 
                 Process p = pb.start();
                 int exitCode = p.waitFor();
 
-                String message = "Test execution completed.<br><a href='http://localhost:8080/index1.html' target='_blank'>📄 View Extent Report</a>";
+                String message = "✅ Test execution completed.<br><a href='/index1.html' target='_blank'>📄 View Extent Report</a>";
                 System.out.println("Returning message: " + message);
                 return message;
 
@@ -80,8 +81,14 @@ public class TriggerServer {
             }
         });
 
-        // ✅ GET route: basic health check
-        get("/", (req, res) -> "Server is up and running!");
-        System.out.println("✅ Spark server started on http://localhost:8080");
+        // ✅ GET: Health check
+        get("/", (req, res) -> "✅ Server is up and running!");
+        System.out.println("✅ Spark server started.");
+    }
+
+    // ✅ Get dynamic port for Azure or default to 8080
+    private static int getAzureAssignedPort() {
+        String port = System.getenv("PORT");
+        return port != null ? Integer.parseInt(port) : 8080;
     }
 }

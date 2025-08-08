@@ -12,8 +12,10 @@ import org.testng.annotations.*;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -45,7 +47,16 @@ public class BaseTest extends EmailConfig {
 	public void beforeTest() throws Exception {
 
 		prop = new Properties();
-		prop.load(new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\Crendentials.properties"));
+		try (InputStream input = getClass().getClassLoader().getResourceAsStream("Crendentials.properties")) {
+		    if (input == null) {
+		        System.out.println("❌ Unable to find Crendentials.properties in classpath");
+		    } else {
+		        prop.load(input);
+		        System.out.println("✅ Loaded Crendentials.properties successfully");
+		    }
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
 		EdgeOptions options = new EdgeOptions();
 
 		// Stealth options
@@ -106,7 +117,7 @@ public class BaseTest extends EmailConfig {
 		reports.flush();
 		Desktop.getDesktop().browse(new File("wwwroot/index1.html").toURI());
 		tdriver.remove();
-		EmailConfig.sendEmail();
+		//EmailConfig.sendEmail();
 		System.out.println("After syite");
 	}
 

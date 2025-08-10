@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [All Test Suite]" verbose="0">
-  <test thread-count="2" parallel="tests" name="ScrapperTests(failed)" verbose="0">
-    <classes>
-      <class name="OG_image.ScrappersFacebook">
-        <methods>
-          <include name="facebookLanding"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="beforeTest"/>
-          <include name="facebookPostInce"/>
-          <include name="afterTest"/>
-          <include name="logLastLine"/>
-        </methods>
-      </class> <!-- OG_image.ScrappersFacebook -->
-    </classes>
-  </test> <!-- ScrapperTests(failed) -->
   <test thread-count="2" parallel="tests" name="ScrapperTests2(failed)" verbose="0">
     <classes>
       <class name="OG_image.ScrappersLinkedIn">
@@ -26,7 +11,7 @@
           <include name="afterTest"/>
           <include name="logLastLine"/>
           <include name="LikedInLanding"/>
-          <include name="LinkedInPostInception"/>
+          <include name="LinkedInPostInception" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- OG_image.ScrappersLinkedIn -->
     </classes>

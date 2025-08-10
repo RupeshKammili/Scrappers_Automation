@@ -1,126 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="2" failed="2" skipped="2">
+<testng-results ignored="0" total="8" passed="5" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-08T13:55:32 IST" name="All Test Suite" finished-at="2025-08-08T13:55:51 IST" duration-ms="18627">
+  <suite started-at="2025-08-10T15:01:07 IST" name="All Test Suite" finished-at="2025-08-10T15:02:40 IST" duration-ms="92996">
     <groups>
     </groups>
-    <test started-at="2025-08-08T13:55:32 IST" name="ScrapperTests" finished-at="2025-08-08T13:55:51 IST" duration-ms="18381">
+    <test started-at="2025-08-10T15:01:07 IST" name="ScrapperTests" finished-at="2025-08-10T15:02:02 IST" duration-ms="54758">
       <class name="OG_image.ScrappersFacebook">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-08T13:55:32 IST" name="beforeTest" finished-at="2025-08-08T13:55:35 IST" duration-ms="2880" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:01:07 IST" name="beforeTest" finished-at="2025-08-10T15:01:20 IST" duration-ms="13474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="facebookLanding()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-08T13:55:35 IST" name="facebookLanding" finished-at="2025-08-08T13:55:50 IST" duration-ms="14418" status="PASS">
+        <test-method signature="facebookLanding()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:01:21 IST" name="facebookLanding" finished-at="2025-08-10T15:01:53 IST" duration-ms="31898" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facebookLanding -->
-        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-08T13:55:50 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-08-08T13:55:50 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at OG_image.DBScrappers.needTotestUrls(DBScrappers.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-... 19 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:01:55 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-08-10T15:01:59 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="3848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.microsoft.com/en-us/surface]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- facebookPostInce -->
-        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-08T13:55:50 IST" name="logLastLine" finished-at="2025-08-08T13:55:50 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookPostInce" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method OG_image.ScrappersFacebook.logLastLine() on instance OG_image.ScrappersFacebook@16d04d3d depends on not successfully finished methods 
-[OG_image.ScrappersFacebook.facebookPostInce() on instance OG_image.ScrappersFacebook@16d04d3d]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method OG_image.ScrappersFacebook.logLastLine() on instance OG_image.ScrappersFacebook@16d04d3d depends on not successfully finished methods 
-[OG_image.ScrappersFacebook.facebookPostInce() on instance OG_image.ScrappersFacebook@16d04d3d]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="facebookPostInce(java.lang.String)[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:01:59 IST" name="facebookPostInce" data-provider="needTotestUrls" finished-at="2025-08-10T15:02:00 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookLanding" duration-ms="1529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- facebookPostInce -->
+        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:02:00 IST" name="logLastLine" finished-at="2025-08-10T15:02:00 IST" depends-on-methods="OG_image.ScrappersFacebook.facebookPostInce" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logLastLine -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-08T13:55:50 IST" name="afterTest" finished-at="2025-08-08T13:55:51 IST" duration-ms="1016" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersFacebook@16d04d3d]" started-at="2025-08-10T15:02:00 IST" name="afterTest" finished-at="2025-08-10T15:02:02 IST" duration-ms="1319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- OG_image.ScrappersFacebook -->
     </test> <!-- ScrapperTests -->
-    <test started-at="2025-08-08T13:55:32 IST" name="ScrapperTests2" finished-at="2025-08-08T13:55:51 IST" duration-ms="18627">
+    <test started-at="2025-08-10T15:01:07 IST" name="ScrapperTests2" finished-at="2025-08-10T15:02:40 IST" duration-ms="92996">
       <class name="OG_image.ScrappersLinkedIn">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:32 IST" name="beforeSuite" finished-at="2025-08-08T13:55:32 IST" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:01:06 IST" name="beforeSuite" finished-at="2025-08-10T15:01:07 IST" duration-ms="763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:32 IST" name="beforeTest" finished-at="2025-08-08T13:55:35 IST" duration-ms="2880" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:01:07 IST" name="beforeTest" finished-at="2025-08-10T15:01:20 IST" duration-ms="13480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="LikedInLanding()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:35 IST" name="LikedInLanding" finished-at="2025-08-08T13:55:50 IST" duration-ms="15121" status="PASS">
+        <test-method signature="LikedInLanding()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:01:21 IST" name="LikedInLanding" finished-at="2025-08-10T15:02:28 IST" duration-ms="67809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LikedInLanding -->
-        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:50 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-08-08T13:55:50 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
+        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:02:29 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-08-10T15:02:34 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="5121" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.microsoft.com/en-us/surface]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@placeholder, 'Enter a URL to see how')]"}
+  (Session info: MicrosoftEdge=139.0.3405.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ca3cc682d7ffd48f4788e16c8fb6c01, findElement {value=//input[contains(@placeholder, 'Enter a URL to see how')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 139.0.3405.86, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54189}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54189/devtoo..., se:cdpVersion: 139.0.3405.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ca3cc682d7ffd48f4788e16c8fb6c01]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@placeholder, 'Enter a URL to see how')]"}
+  (Session info: MicrosoftEdge=139.0.3405.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ca3cc682d7ffd48f4788e16c8fb6c01, findElement {value=//input[contains(@placeholder, 'Enter a URL to see how')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 139.0.3405.86, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54189}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54189/devtoo..., se:cdpVersion: 139.0.3405.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ca3cc682d7ffd48f4788e16c8fb6c01
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
+at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:35)
+at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -134,24 +130,88 @@ at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.io.FileNotFoundException: .\azure-deploy\wwwroot\uploads\Phase2URLs.xlsx (The process cannot access the file because it is being used by another process)
-at java.base/java.io.FileInputStream.open0(Native Method)
-at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
-at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
-at OG_image.DBScrappers.needTotestUrls(DBScrappers.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
-... 19 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LinkedInPostInception -->
-        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:50 IST" name="logLastLine" finished-at="2025-08-08T13:55:50 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LinkedInPostInception" duration-ms="0" status="SKIP">
+        <test-method signature="LinkedInPostInception(java.lang.String)[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:02:34 IST" name="LinkedInPostInception" data-provider="needTotestUrls" finished-at="2025-08-10T15:02:39 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LikedInLanding" duration-ms="5052" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@placeholder, 'Enter a URL to see how')]"}
+  (Session info: MicrosoftEdge=139.0.3405.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ca3cc682d7ffd48f4788e16c8fb6c01, findElement {value=//input[contains(@placeholder, 'Enter a URL to see how')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 139.0.3405.86, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54189}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54189/devtoo..., se:cdpVersion: 139.0.3405.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ca3cc682d7ffd48f4788e16c8fb6c01]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[contains(@placeholder, 'Enter a URL to see how')]"}
+  (Session info: MicrosoftEdge=139.0.3405.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [2ca3cc682d7ffd48f4788e16c8fb6c01, findElement {value=//input[contains(@placeholder, 'Enter a URL to see how')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 139.0.3405.86, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54189}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\V-RKAM~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54189/devtoo..., se:cdpVersion: 139.0.3405.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ca3cc682d7ffd48f4788e16c8fb6c01
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy29.sendKeys(Unknown Source)
+at LinkedIn.LinkedInPostInceptorPage.validateOGimageForURL(LinkedInPostInceptorPage.java:35)
+at OG_image.ScrappersLinkedIn.LinkedInPostInception(ScrappersLinkedIn.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LinkedInPostInception -->
+        <test-method signature="logLastLine()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:02:39 IST" name="logLastLine" finished-at="2025-08-10T15:02:39 IST" depends-on-methods="OG_image.ScrappersLinkedIn.LinkedInPostInception" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
               <![CDATA[Method OG_image.ScrappersLinkedIn.logLastLine() on instance OG_image.ScrappersLinkedIn@5656be13 depends on not successfully finished methods 
@@ -179,11 +239,11 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logLastLine -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:50 IST" name="afterTest" finished-at="2025-08-08T13:55:51 IST" duration-ms="561" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:02:39 IST" name="afterTest" finished-at="2025-08-10T15:02:40 IST" duration-ms="1121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-08T13:55:51 IST" name="afterSuite" finished-at="2025-08-08T13:55:54 IST" duration-ms="2706" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:OG_image.ScrappersLinkedIn@5656be13]" started-at="2025-08-10T15:02:40 IST" name="afterSuite" finished-at="2025-08-10T15:02:45 IST" duration-ms="4591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

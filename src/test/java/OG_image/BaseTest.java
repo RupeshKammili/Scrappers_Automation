@@ -57,6 +57,7 @@ public class BaseTest extends EmailConfig {
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
+		
 		EdgeOptions options = new EdgeOptions();
 
 		// Stealth options
@@ -93,7 +94,7 @@ public class BaseTest extends EmailConfig {
 	@BeforeSuite
 	public void beforeSuite() throws IOException {
 
-		sparkReporter = new ExtentSparkReporter("wwwroot/index1.html");
+		sparkReporter = new ExtentSparkReporter("extent.html");
 		reports = new ExtentReports();
 		sparkReporter.loadJSONConfig(new File("./src/test/resources/extent-reports-json.json"));
 		// sparkReporter.config().setOfflineMode(true);
@@ -108,14 +109,14 @@ public class BaseTest extends EmailConfig {
 
 		reports.setSystemInfo("OS", System.getProperty("os.name"));
 		reports.setSystemInfo("java", System.getProperty("java.version"));
-		System.out.println("Before suite/");
+		System.out.println("Before suite");
 
 	}
 
 	@AfterSuite
 	public void afterSuite() throws IOException {
 		reports.flush();
-		Desktop.getDesktop().browse(new File("wwwroot/index1.html").toURI());
+		Desktop.getDesktop().browse(new File("extent.html").toURI());
 		tdriver.remove();
 		//EmailConfig.sendEmail();
 		System.out.println("After syite");
